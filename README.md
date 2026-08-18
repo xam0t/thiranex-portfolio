@@ -1,16 +1,112 @@
-# React + Vite
+# Syed Muhammad Adnan — Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-stack personal portfolio website built with React, Vite, Node.js, Express and MongoDB.
 
-Currently, two official plugins are available:
+## 🌐 Live Website
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+https://thiranex-portfolio-web.onrender.com
 
-## React Compiler
+## 👨‍💻 About Me
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+I'm Syed Muhammad Adnan, a Computer Science Engineering student at Sai Vidya Institute Of Technology, Bangalore.
 
-## Expanding the ESLint configuration
+- 🎓 B.E. Computer Science Engineering
+- 🏫 Sai Vidya Institute Of Technology
+- 📅 Graduation: 2028
+- 💻 Interested in Web Development, Software Development and Backend Development
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tech Stack
+
+### Frontend
+- React
+- JavaScript
+- HTML
+- CSS
+- Vite
+
+### Backend
+- Node.js
+- Express.js
+- REST API
+
+### Database
+- MongoDB
+- Mongoose
+
+### Other Tools
+- Git
+- GitHub
+- Render
+- MongoDB Atlas
+
+## 🚀 Features
+
+- Responsive personal portfolio
+- About Me section
+- Skills section
+- Project showcase
+- Education timeline
+- Contact form
+- Backend API for contact submissions
+- MongoDB database integration
+- Input validation
+- Secure environment variables
+- Responsive mobile navigation
+- Live deployment
+
+## 📌 Featured Project
+
+### Smart Inventory Management Application
+
+A full-stack inventory and billing solution designed for small businesses.
+
+**Technologies:**
+- React Native
+- Node.js
+- MongoDB
+- JWT Authentication
+
+**Features:**
+- Inventory management
+- Sales and profit tracking
+- Best-selling and low-selling product identification
+- Automatic bill generation
+- WhatsApp bill delivery
+- Secure user authentication
+- Designed for everyday shop operations
+
+## 🎓 Education
+
+### Sai Vidya Institute Of Technology
+B.E. Computer Science Engineering  
+2024 – 2028
+
+### Govt. Higher Secondary Institute, Hadipora
+Higher Secondary Education  
+2022 – 2024
+
+### St. Joseph's Higher Secondary School, Baramulla
+School Education  
+2012 – 2022
+
+## 📫 Contact
+
+- Email: imailadnan0@gmail.com
+- GitHub: https://github.com/xam0t
+- LinkedIn: https://www.linkedin.com/in/syedmuhammadadnan/
+
+## ⚙️ Running Locally
+
+### Frontend
+
+```bash
+npm install
+npm run dev
+
+
+### Backend
+
+```bash
+cd server
+npm install
+npm start
