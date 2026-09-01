@@ -1,0 +1,842 @@
+/* ================================
+   Global App
+================================ */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, Arial, sans-serif;
+  background: #f5f7fb;
+  color: #172033;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+
+/* ================================
+   App
+================================ */
+
+.app {
+  min-height: 100vh;
+}
+
+
+/* ================================
+   Navbar
+================================ */
+
+.navbar {
+  height: 72px;
+  padding: 0 7%;
+  background: #ffffff;
+  border-bottom: 1px solid #e7eaf0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar h2 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navbar-right span {
+  color: #596275;
+  font-size: 14px;
+}
+
+.navbar-right button {
+  border: none;
+  background: #172033;
+  color: white;
+  padding: 9px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.navbar-right button:hover {
+  opacity: 0.9;
+}
+
+
+/* ================================
+   Dashboard
+================================ */
+
+.dashboard {
+  width: min(1100px, 90%);
+  margin: 0 auto;
+  padding: 55px 0 80px;
+}
+
+.dashboard-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 35px;
+}
+
+.dashboard-label {
+  margin: 0 0 8px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: #667085;
+}
+
+.dashboard-header h1 {
+  margin: 0;
+  font-size: 42px;
+  line-height: 1.1;
+}
+
+.dashboard-header p {
+  margin: 10px 0 0;
+  color: #667085;
+}
+
+
+/* ================================
+   Add Task Button
+================================ */
+
+.add-task-button {
+  border: none;
+  background: #172033;
+  color: #ffffff;
+
+  padding: 13px 20px;
+  border-radius: 10px;
+
+  font-weight: 600;
+  cursor: pointer;
+
+  transition: transform 0.2s ease,
+              opacity 0.2s ease;
+}
+
+.add-task-button:hover {
+  transform: translateY(-1px);
+  opacity: 0.9;
+}
+
+
+/* ================================
+   Statistics
+================================ */
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 45px;
+}
+
+.stat-card {
+  background: #ffffff;
+  border: 1px solid #e7eaf0;
+  border-radius: 14px;
+  padding: 22px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.stat-card span {
+  color: #667085;
+  font-size: 14px;
+}
+
+.stat-card strong {
+  font-size: 30px;
+}
+
+.search-container {
+  margin-bottom: 25px;
+}
+
+.search-container input {
+  width: 100%;
+  padding: 14px 16px;
+
+  border: 1px solid #dfe3ea;
+  border-radius: 12px;
+
+  background: white;
+
+  font-size: 14px;
+
+  outline: none;
+}
+
+.search-container input:focus {
+  border-color: #667085;
+}
+
+
+.filter-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 30px;
+}
+
+.filter-button {
+  border: 1px solid #dfe3ea;
+  background: #ffffff;
+  color: #667085;
+
+  padding: 9px 15px;
+  border-radius: 999px;
+
+  font-size: 13px;
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.filter-button:hover {
+  background: #f5f7fb;
+}
+
+.filter-button.active {
+  background: #172033;
+  border-color: #172033;
+  color: #ffffff;
+}
+
+/* ================================
+   Task Section
+================================ */
+
+.tasks-section {
+  margin-top: 35px;
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 18px;
+}
+
+.section-heading h2 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.section-heading span {
+  color: #667085;
+  font-size: 14px;
+}
+
+
+/* ================================
+   Task List
+================================ */
+
+.task-list {
+  display: grid;
+  gap: 16px;
+}
+
+.task-card {
+  background: #ffffff;
+  border: 1px solid #e7eaf0;
+  border-radius: 14px;
+  padding: 24px;
+
+  transition: box-shadow 0.2s ease,
+              transform 0.2s ease;
+}
+
+.task-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(20, 30, 50, 0.08);
+}
+
+.task-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.task-card-header h3 {
+  margin: 0 0 10px;
+  font-size: 19px;
+}
+
+.task-description {
+  color: #667085;
+  line-height: 1.6;
+  margin: 10px 0 20px;
+}
+
+
+/* ================================
+   Status
+================================ */
+
+.status {
+  display: inline-block;
+
+  padding: 5px 10px;
+  border-radius: 999px;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.status.todo {
+  background: #eef2ff;
+  color: #4338ca;
+}
+
+.status.in-progress {
+  background: #fff7ed;
+  color: #c2410c;
+}
+
+.status.completed {
+  background: #ecfdf3;
+  color: #15803d;
+}
+
+
+/* ================================
+   Task Details
+================================ */
+
+.task-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+
+  padding-top: 15px;
+  border-top: 1px solid #eef0f4;
+
+  color: #667085;
+  font-size: 13px;
+}
+
+
+/* ================================
+   Task Actions
+================================ */
+
+.task-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.task-actions button {
+  border: 1px solid #dfe3ea;
+  background: #ffffff;
+
+  padding: 8px 14px;
+  border-radius: 8px;
+
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.task-actions button:hover {
+  background: #f5f7fb;
+}
+
+.task-actions button:last-child {
+  color: #c0392b;
+}
+
+
+/* ================================
+   Task Form
+================================ */
+
+.task-form-container {
+  margin-bottom: 35px;
+}
+
+.task-form-card {
+  background: #ffffff;
+  border: 1px solid #e7eaf0;
+  border-radius: 16px;
+
+  padding: 28px;
+
+  box-shadow: 0 10px 35px rgba(20, 30, 50, 0.08);
+}
+
+.task-form-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 25px;
+}
+
+.task-form-header h2 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.task-form-header > button {
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+
+/* ================================
+   Form Fields
+================================ */
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+
+  border: 1px solid #dfe3ea;
+  border-radius: 9px;
+
+  padding: 11px 13px;
+
+  outline: none;
+  background: #ffffff;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  border-color: #667085;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+
+/* ================================
+   Form Actions
+================================ */
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+
+  margin-top: 25px;
+}
+
+.form-actions button {
+  border: none;
+  padding: 11px 18px;
+  border-radius: 9px;
+  cursor: pointer;
+}
+
+.form-actions button:first-child {
+  background: #eef0f4;
+  color: #344054;
+}
+
+.form-actions button:last-child {
+  background: #172033;
+  color: #ffffff;
+}
+
+.form-actions button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+
+/* ================================
+   Empty State
+================================ */
+
+.empty-state {
+  text-align: center;
+
+  background: #ffffff;
+  border: 1px dashed #d6dae2;
+  border-radius: 16px;
+
+  padding: 60px 20px;
+}
+
+.empty-state h2 {
+  margin: 0 0 8px;
+}
+
+.empty-state p {
+  color: #667085;
+  margin-bottom: 25px;
+}
+
+.empty-state button {
+  border: none;
+  background: #172033;
+  color: white;
+
+  padding: 11px 18px;
+  border-radius: 9px;
+
+  cursor: pointer;
+}
+
+
+/* ================================
+   Errors
+================================ */
+
+.error-message {
+  color: #b42318;
+  background: #fef3f2;
+
+  border: 1px solid #fecdca;
+  border-radius: 8px;
+
+  padding: 10px 14px;
+}
+
+
+/* ================================
+   Responsive Design
+================================ */
+
+@media (max-width: 800px) {
+
+  .navbar {
+    padding: 0 5%;
+  }
+
+  .dashboard {
+    width: 90%;
+    padding-top: 40px;
+  }
+
+  .dashboard-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .dashboard-header h1 {
+    font-size: 34px;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+@media (max-width: 550px) {
+
+  .navbar {
+    height: auto;
+    padding: 18px 5%;
+
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .navbar-right {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+  }
+
+  .navbar-right span {
+    font-size: 12px;
+  }
+
+  .dashboard {
+    width: 92%;
+    padding-top: 30px;
+  }
+
+  .dashboard-header h1 {
+    font-size: 30px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .stat-card {
+    padding: 16px;
+  }
+
+  .stat-card strong {
+    font-size: 25px;
+  }
+
+  .task-card {
+    padding: 18px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .task-actions {
+    flex-direction: column;
+  }
+
+  .task-actions button {
+    width: 100%;
+  }
+
+}
+
+
+/* ================================
+   Authentication
+================================ */
+
+.auth-container {
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 30px;
+
+  background: #f5f7fb;
+}
+
+.auth-card {
+  width: min(430px, 100%);
+
+  background: #ffffff;
+
+  border: 1px solid #e7eaf0;
+  border-radius: 18px;
+
+  padding: 40px;
+
+  box-shadow: 0 15px 45px rgba(20, 30, 50, 0.08);
+}
+
+.auth-card h1 {
+  margin: 0 0 10px;
+
+  font-size: 30px;
+}
+
+.auth-card > p {
+  margin: 0 0 30px;
+
+  color: #667085;
+
+  line-height: 1.5;
+}
+
+
+/* Auth form */
+
+.auth-card form {
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-card .form-group {
+  margin-bottom: 18px;
+}
+
+.auth-card .form-group label {
+  color: #344054;
+}
+
+.auth-card .form-group input {
+  padding: 13px 14px;
+
+  border: 1px solid #dfe3ea;
+  border-radius: 9px;
+
+  outline: none;
+}
+
+.auth-card .form-group input:focus {
+  border-color: #667085;
+}
+
+
+/* Main auth button */
+
+.auth-card form button[type="submit"] {
+  width: 100%;
+
+  border: none;
+  border-radius: 9px;
+
+  padding: 13px;
+
+  margin-top: 5px;
+
+  background: #172033;
+  color: #ffffff;
+
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.auth-card form button[type="submit"]:hover {
+  opacity: 0.9;
+}
+
+.auth-card form button[type="submit"]:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+
+/* Error / success message */
+
+.auth-message {
+  margin: 18px 0 0;
+
+  padding: 11px 13px;
+
+  border-radius: 8px;
+
+  background: #f5f7fb;
+
+  color: #475467;
+
+  font-size: 14px;
+}
+
+
+/* Login / Register switch */
+
+.switch-auth {
+  width: 100%;
+
+  margin-top: 22px;
+
+  padding: 10px;
+
+  border: none;
+
+  background: transparent;
+
+  color: #475467;
+
+  font-size: 13px;
+
+  cursor: pointer;
+}
+
+.switch-auth:hover {
+  color: #172033;
+}
+
+
+/* Mobile */
+
+@media (max-width: 550px) {
+
+  .auth-container {
+    padding: 20px;
+  }
+
+  .auth-card {
+    padding: 28px 22px;
+  }
+
+  .auth-card h1 {
+    font-size: 26px;
+  }
+
+}
+
+
+
+/* ================================
+   Priority & Due Dates
+================================ */
+
+.priority {
+  font-weight: 600;
+}
+
+.priority-low {
+  color: #15803d;
+}
+
+.priority-medium {
+  color: #b45309;
+}
+
+.priority-high {
+  color: #b42318;
+}
+
+.due-date {
+  color: #667085;
+}
+
+.due-date.due-today {
+  color: #b45309;
+  font-weight: 600;
+}
+
+.due-date.overdue {
+  color: #b42318;
+  font-weight: 600;
+}
+
+
+.task-title.completed-title {
+  text-decoration: line-through;
+  opacity: 0.55;
+}
